@@ -3,5 +3,5 @@
     <!-- REMOVALS (must be at the top) -->
 
     <!-- COMMON -->
-    <project name="steadfasterX/android_device_oneplus_hotdog_recovery" path="device/oneplus/fajita" remote="github" revision="android-10.0" />
+    <project name="steadfasterX/android_device_oneplus_hotdog_recovery" path="device/oneplus/fajita" remote="github" revision="android-9.0" />
 </manifest>
