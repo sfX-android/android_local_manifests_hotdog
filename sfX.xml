@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="Gitlab" fetch="https://gitlab.com" />
+
+  <remote name="sfX"
+	  fetch="ssh://git@github.com/sfX-Android"
+	  revision="eos-q" />
+
+    <!--
+    ################################################# 
+    lin17-microG / MSe1969 stuff
+    ################################################# -->
+
+    <!-- GrapheneOS' hardened_malloc (forked from GlassROM) -->
+    <project path="external/hardened_malloc" name="lin17-microG/hardened_malloc" revision="master" />
+
+    <!-- Bromite SystemWebView & Browser prebuilt-->
+    <project path="external/Bromite" name="MSe1969/android_external_Bromite" remote="Gitlab" revision="master" />
+    <project path="external/bromite-webview" name="MSe1969/android_external_bromite-webview" revision="master" />
+
+    <!-- AuroraStore prebuilt
+    <project path="prebuilts/AuroraStore" name="MSe1969/AuroraStore-prebuilt" revision="master" /> -->
+
+    <!-- Captive Portal detection RROs -->
+    <project path="packages/overlays/CaptivePortal204" name="lin17-microG/android_packages_overlays_CaptivePortal204" revision="master" />
+
+    <!-- vendor blobs -->
+    <project name="lin17-microG/proprietary_vendor_oneplus" path="vendor/oneplus" remote="github" />
+
+    <project name="AICP/external_sony_boringssl-compat" path="external/sony/boringssl-compat" revision="q10.0" remote="github" />
+
+    <!--
+    ################################################# 
+    LineageOS stuff
+    ################################################# -->
+
+    <project name="LineageOS/android_device_oneplus_common" path="device/oneplus/common" remote="github" />
+    <project name="LineageOS/android_hardware_sony_timekeep" path="hardware/sony/timekeep" remote="github" />
+
+    <!--
+    ################################################# 
+    steadfasterX stuff
+    ################################################# -->
+
+    <project name="android_device_oneplus_hotdog" path="device/oneplus/hotdog" remote="sfX" />
+    <project name="android_device_oneplus_sm8150-common" path="device/oneplus/sm8150-common" remote="sfX" />
+    <project name="android_kernel_oneplus_sm8150" path="kernel/oneplus/sm8150" revision="android-10.0" remote="sfX" />
+
+    <!-- /e/ related -->
+    <project path="vendor/e" name="steadfasterX/android_vendor_e" remote="e" revision="v1-q" />
+    <project name="android_vendor_fdroid" path="vendor/fdroid" remote="sfX" revision="eos" />
+
+</manifest>
