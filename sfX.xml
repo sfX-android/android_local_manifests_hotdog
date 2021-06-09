@@ -55,4 +55,8 @@
     <!-- /e/ related -->
     <project path="vendor/e" name="steadfasterX/android_vendor_e" remote="e" revision="v1-q" />
 
+    <!-- extendrom -->
+    <remote name="sfX" fetch="https://github.com/sfX-Android/" />
+    <project path="vendor/extendrom" name="android_vendor_extendrom" remote="sfX" revision="main" />
+
 </manifest>
