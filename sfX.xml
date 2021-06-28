@@ -56,5 +56,7 @@
 
     <!-- extendrom -->
     <project path="vendor/extendrom" name="android_vendor_extendrom" remote="sfX" revision="main" />
+    <!-- gestures -->
+    <project path="packages/apps/Trebuchet" name="LineageOS/android_packages_apps_Trebuchet" remote="github" revision="lineage-17.1" />
 
 </manifest>
