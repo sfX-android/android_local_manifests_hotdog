@@ -48,6 +48,9 @@
     <project name="android_device_oneplus_sm8150-common" path="device/oneplus/sm8150-common" remote="sfX" revision="eos-q_lockedbl" />
     <project name="android_kernel_oneplus_sm8150" path="kernel/oneplus/sm8150" revision="android-10.0" remote="sfX" />
 
+    <!-- signing tools -->
+    <project path="external/buildtools" name="android_buildtools" remote="sfX" revision="main" />
+    
     <!-- f-droid -->
     <project path="packages/apps/F-DroidPrivilegedExtension" name="privileged-extension.git" remote="fdroid" revision="master" />
 
