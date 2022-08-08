@@ -27,7 +27,7 @@
     <project path="packages/overlays/CaptivePortal204" name="lin17-microG/android_packages_overlays_CaptivePortal204" revision="master" />
 
     <!-- vendor blobs -->
-    <project name="lin17-microG/proprietary_vendor_oneplus" path="vendor/oneplus" remote="github" />
+    <project name="proprietary_vendor_oneplus" path="vendor/oneplus" remote="sfX" revision="lineage-17.1" />
 
     <project name="AICP/external_sony_boringssl-compat" path="external/sony/boringssl-compat" revision="q10.0" remote="github" />
 
