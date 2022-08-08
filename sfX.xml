@@ -56,7 +56,10 @@
 
     <!-- extendrom -->
     <project path="vendor/extendrom" name="android_vendor_extendrom" remote="sfX" revision="main" />
-    <!-- gestures -->
-    <!-- <project path="packages/apps/Trebuchet" name="LineageOS/android_packages_apps_Trebuchet" remote="github" revision="lineage-17.1" />-->
+
+    <remote name="zx2c4" fetch="https://git.zx2c4.com/" />
+    <project remote="zx2c4" name="wireguard-linux-compat" path="kernel/wireguard-linux-compat" revision="master" sync-s="true">
+        <linkfile src="src" dest="kernel/oneplus/sm8150/net/wireguard" />
+    </project>
 
 </manifest>
