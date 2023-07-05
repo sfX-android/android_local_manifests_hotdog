@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- START OF REMOTE DEFINITIONS -->
+        <remote name="gitlab" fetch="https://gitlab.com/" />
+        <remote name="sfX" fetch="https://github.com/sfX-Android/" />
+        <remote name="sfX-private" fetch="ssh://code.binbash.rocks:22227/nonpublic" />
+<!-- END OF REMOTE DEFINITIONS -->
+  
+<!-- START OF UNNECESSARY REPO REMOVAL -->
+        <remove-project name="LineageOS/android_external_ant-wireless_ant_native" />
+        <remove-project name="LineageOS/android_external_ant-wireless_ant_service" />
+        <remove-project name="LineageOS/android_external_bash" />
+        <remove-project name="LineageOS/android_external_htop" />
+        <remove-project name="LineageOS/android_external_libncurses" />
+        <remove-project name="LineageOS/android_external_nano" />
+        <remove-project name="LineageOS/android_external_openssh" />
+        <remove-project name="LineageOS/android_external_vim" />
+        <remove-project name="LineageOS/android_packages_apps_Eleven" />
+        <remove-project name="LineageOS/android_packages_apps_Jelly" />
+        <!--<remove-project name="LineageOS/android_packages_apps_Stk" />-->
+        <remove-project name="LineageOS/charter" />
+        <remove-project name="LineageOS/cm_crowdin" />
+        <remove-project name="LineageOS/contributors-cloud-generator" />
+        <remove-project name="LineageOS/hudson" />
+        <remove-project name="LineageOS/lineage_wiki" />
+        <remove-project name="LineageOS/mirror" />
+        <remove-project name="LineageOS/www" />
+        <remove-project name="platform/packages/apps/Browser2" />
+        <remove-project name="platform/packages/apps/Music" />
+        <remove-project name="platform/packages/apps/MusicFX" />
+        <remove-project name="platform/packages/apps/QuickSearchBox" />
+        <remove-project name="platform/packages/apps/SampleLocationAttribution" />
+        <!--<remove-project name="platform/packages/modules/AdServices" />-->
+        <remove-project name="platform/prebuilts/clang/host/darwin-x86" />
+        <remove-project name="platform/prebuilts/go/darwin-x86" />
+<!-- END OF UNNECESSARY REPO REMOVAL -->
+
+<!-- START OF BRANCH SWITCHING -->
+        <!--<remove-project name="platform/external/swiftshader" />
+        <project path="external/swiftshader" name="google/swiftshader" remote="github" revision="master" />-->
+
+        <!-- Switch to the Mulch WebView -->
+        <remove-project name="LineageOS/android_external_chromium-webview_patches" />
+        <remove-project name="LineageOS/android_external_chromium-webview_prebuilt_arm" />
+        <remove-project name="LineageOS/android_external_chromium-webview_prebuilt_arm64" />
+        <remove-project name="LineageOS/android_external_chromium-webview_prebuilt_x86" />
+        <remove-project name="LineageOS/android_external_chromium-webview_prebuilt_x86_64" />
+        <project path="external/chromium-webview" name="divested-mobile/mulch" groups="pdk" clone-depth="1" remote="gitlab" revision="master" />
+<!-- END OF BRANCH SWITCHING -->
+  
+<!-- START OF ADDITIONAL REPOS -->
+        <!-- GrapheneOS -->
+        <project path="external/hardened_malloc" name="GrapheneOS/hardened_malloc" remote="github" revision="13" />
+        <project path="external/SecureCamera" name="GrapheneOS/platform_external_Camera" remote="github" revision="13" />
+<!-- END OF ADDITIONAL REPOS -->
+
+<!-- START OF DEVICE REPOS -->
+        <!-- Common -->
+        <project path="system/qcom" name="LineageOS/android_system_qcom" remote="github" revision="lineage-20" />
+        <project path="external/bson" name="LineageOS/android_external_bson" remote="github" revision="lineage-20" />
+        <project path="hardware/sony/SonyOpenTelephony" name="LineageOS/android_hardware_sony_SonyOpenTelephony" remote="github" revision="lineage-20" />
+        <project path="packages/apps/ElmyraService" name="LineageOS/android_packages_apps_ElmyraService" remote="github" />
+
+        <!-- OnePlus 7T Pro (hotdog) -->
+        <project path="device/oneplus/hotdog" name="LineageOS/android_device_oneplus_hotdog" remote="github" revision="lineage-20" />
+        <project path="device/oneplus/sm8150-common" name="LineageOS/android_device_oneplus_sm8150-common" remote="github" revision="lineage-20" />
+        <project path="kernel/oneplus/sm8150" name="LineageOS/android_kernel_oneplus_sm8150" remote="github" revision="lineage-20" />
+
+        <!-- Proprietary Blobs -->
+        <project path="vendor/oneplus/msm8998-common" name="TheMuppets/proprietary_vendor_oneplus_msm8998-common" remote="github" revision="lineage-20" />
+        <project path="vendor/oneplus/hotdog" name="TheMuppets/proprietary_vendor_oneplus_hotdog" remote="github" revision="lineage-20" />
+        <project path="vendor/oneplus/sm8150-common" name="TheMuppets/proprietary_vendor_oneplus_sm8150-common" remote="github" revision="lineage-20" />
+        <project path="hardware/oplus" name="LineageOS/android_hardware_oplus" remote="github" revision="lineage-20" />
+        <project path="vendor/firmware" name="divest_vendor_firmware" remote="sfX-private" revision="android-13_nolock" />
+
+        <!-- extendrom -->
+        <project path="vendor/extendrom" name="android_vendor_extendrom" remote="sfX" revision="testing_magisk-ng" />
+        <!-- build tools -->
+        <project path="external/buildtools" name="android_buildtools" remote="sfX" revision="main" />
+
+        <!--project path="device/google/gs101" name="LineageOS/android_device_google_gs101" remote="github" revision="lineage-20" />
+        <project path="kernel/google/gs101/private/gs-google" name="LineageOS/android_kernel_google_gs101" remote="github" revision="lineage-20" />-->
+        <!-- Google Pixel 6a (bluejay) -->
+        <!--project path="device/google/bluejay" name="LineageOS/android_device_google_bluejay" remote="github" revision="lineage-20" />-->
+        <!-- uses gs101 commons -->
+        <!-- OnePlus 6T (fajita) -->
+        <!--project path="device/oneplus/fajita" name="LineageOS/android_device_oneplus_fajita" remote="github" revision="lineage-20" />-->
+
+        <!-- used in patchWorkspace 
+        <project path="device/essential/mata" name="LineageOS/android_device_essential_mata" remote="github" revision="lineage-20" />
+        <project path="device/google/gs101" name="LineageOS/android_device_google_gs101" remote="github" revision="lineage-20" />
+        <project path="device/google/gs201" name="LineageOS/android_device_google_gs201" remote="github" revision="lineage-20" />
+        <project path="device/google/redbull" name="LineageOS/android_device_google_redbull" remote="github" revision="lineage-20" />
+        <project path="device/google/muskie" name="LineageOS/android_device_google_muskie" remote="github" revision="lineage-20" />
+        <project path="device/google/wahoo" name="LineageOS/android_device_google_wahoo" remote="github" revision="lineage-20" />
+        <project path="device/google/taimen" name="LineageOS/android_device_google_taimen" remote="github" revision="lineage-20" />
+        <project path="device/oneplus/msm8998-common" name="LineageOS/android_device_oneplus_msm8998-common" remote="github" revision="lineage-20" />
+        <project path="device/oneplus/sdm845-common" name="LineageOS/android_device_oneplus_sdm845-common" remote="github" revision="lineage-20" />
+        <project path="kernel/fairphone/sdm632" name="LineageOS/android_kernel_fairphone_sdm632" remote="github" revision="lineage-20" />
+        <project path="kernel/oneplus/sm7250" name="LineageOS/android_kernel_oneplus_sm7250" remote="github" revision="lineage-20" />[ENTERING FAILED] kernel/fairphone/sdm632
+        <project path="kernel/oneplus/sm8250" name="LineageOS/android_kernel_oneplus_sm8250" remote="github" revision="lineage-20" />
+        -->
+</manifest>
