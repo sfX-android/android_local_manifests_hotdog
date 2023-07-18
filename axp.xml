@@ -64,7 +64,7 @@
 
         <!-- OnePlus 7T Pro (hotdog) -->
         <project path="device/oneplus/hotdog" name="LineageOS/android_device_oneplus_hotdog" remote="github" revision="lineage-20" />
-        <project path="device/oneplus/sm8150-common" name="android_device_oneplus_sm8150-common" remote="sfX" revision="xos-a13" />
+        <project path="device/oneplus/sm8150-common" name="android_device_oneplus_sm8150-common" remote="sfX" revision="axp-a13" />
         <project path="kernel/oneplus/sm8150" name="LineageOS/android_kernel_oneplus_sm8150" remote="github" revision="lineage-20" />
 
         <!-- Proprietary Blobs -->
