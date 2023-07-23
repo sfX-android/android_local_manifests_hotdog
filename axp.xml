@@ -75,7 +75,7 @@
         <project path="vendor/firmware" name="divest_vendor_firmware" remote="sfX-private" revision="android-13_nolock" />
 
         <!-- extendrom -->
-        <project path="vendor/extendrom" name="android_vendor_extendrom" remote="sfX" revision="sp4" />
+        <project path="vendor/extendrom" name="android_vendor_extendrom" remote="sfX" revision="main" />
         <!-- build tools -->
         <project path="external/buildtools" name="android_buildtools" remote="sfX" revision="main" />
 
